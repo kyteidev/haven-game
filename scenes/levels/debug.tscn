@@ -3,16 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://64bjmsm54gec" path="res://scenes/objects/player_ball.tscn" id="1_nwlxf"]
 [ext_resource type="PackedScene" uid="uid://4a0nbdswjslw" path="res://scenes/PlayerManager.tscn" id="1_ulekh"]
 [ext_resource type="PackedScene" uid="uid://dgl8akvthj6bn" path="res://scenes/player.tscn" id="2_p0r41"]
+[ext_resource type="Texture2D" uid="uid://5bojtwwin7fm" path="res://assets/floor_ceiling_2_tiles_floor_1.png" id="3_h7x1a"]
 [ext_resource type="PackedScene" uid="uid://b7i5p8vuo14uq" path="res://assets/armchair_1_3.glb" id="3_ulekh"]
+[ext_resource type="PackedScene" uid="uid://k405s683atu7" path="res://assets/arc_1_wall_1.glb" id="5_04m7m"]
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0q0uo"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_xs65t"]
+size = Vector3(188.33685, 0.371521, 3.0805054)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8neu0"]
-load_path = "res://.godot/imported/wood_4.png-c0ed881cb59650264f84ed82c14898fe.s3tc.ctex"
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nwlxf"]
-albedo_texture = SubResource("CompressedTexture2D_8neu0")
-uv1_scale = Vector3(4.24, 4.24, 4.24)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gd5e8"]
+albedo_texture = ExtResource("3_h7x1a")
+uv1_scale = Vector3(11.85, 11.85, 11.85)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p0r41"]
 
@@ -29,13 +29,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55306625, -0.33723366, 22.4
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1455084349]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=328325193]
-transform = Transform3D(10.71, 0, 0, 0, 10.71, 0, 0, 0, 10.71, -0.034220695, 0.0491578, -1.8848877)
-shape = SubResource("WorldBoundaryShape3D_0q0uo")
+transform = Transform3D(10.71, 0, 0, 0, 10.71, 0, 0, 0, 10.71, 991.38763, -3.3163471, 9.256219)
+shape = SubResource("BoxShape3D_xs65t")
 debug_fill = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=2056608086]
 transform = Transform3D(10.404538, 0, 0, 0, 13.933327, 0, 0, 0, 13.543832, 0.4804144, -0.8780053, 18.527685)
-material_override = SubResource("StandardMaterial3D_nwlxf")
+material_override = SubResource("StandardMaterial3D_gd5e8")
 mesh = SubResource("PlaneMesh_p0r41")
 
 [node name="Player" parent="." unique_id=1997340143 instance=ExtResource("2_p0r41")]
@@ -55,3 +55,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9777466, -0.8745646, 7.2159
 [node name="CollisionShape3D" type="CollisionShape3D" parent="armchair_1_32/StaticBody3D" unique_id=1153508271]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03289795, 0.45825195, 0.47598422)
 shape = SubResource("BoxShape3D_btb5y")
+
+[node name="arc_1_wall_12" parent="." unique_id=1517068151 instance=ExtResource("5_04m7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.553251, -1.3268528, 17.435326)
