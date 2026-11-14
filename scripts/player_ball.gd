@@ -40,7 +40,7 @@ func _input(event: InputEvent) -> void:
 	if player_manager.mode != PlayerManager.PlayerMode.BALL:
 		return
 		
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and not ball_moving:
 		mouse_delta += event.screen_relative
 		
 	# launching ball
