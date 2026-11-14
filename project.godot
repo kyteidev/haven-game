@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="haven-game"
+run/main_scene="uid://b5kl7j7jltcox"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
