@@ -5,21 +5,19 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_nxcxh"]
 
-[node name="PlayerBall" type="Node3D" unique_id=355668006]
+[node name="PlayerBall" type="RigidBody3D" unique_id=436715049]
+gravity_scale = 0.0
 script = ExtResource("1_0bcqr")
 
-[node name="Ball" type="RigidBody3D" parent="." unique_id=436715049]
-gravity_scale = 0.0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball" unique_id=132194720]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=132194720]
 shape = SubResource("SphereShape3D_nxcxh")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Ball" unique_id=1015660767]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1015660767]
 
-[node name="Arrow" parent="Ball" unique_id=379823709 instance=ExtResource("2_hrn2t")]
+[node name="Arrow" parent="." unique_id=379823709 instance=ExtResource("2_hrn2t")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Ball" unique_id=1200204405]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1200204405]
 transform = Transform3D(0.99978065, -0.003636613, 0.020624258, 0, 0.9848077, 0.17364818, -0.02094242, -0.17361009, 0.9845917, 0, 1.2, 2)
 current = true
 
