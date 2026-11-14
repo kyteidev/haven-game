@@ -3,7 +3,7 @@ extends Node3D
 
 enum PlayerMode { BALL, PLAYER }
 
-var mode := PlayerMode.BALL
+var mode := PlayerMode.PLAYER
 var launched := false
 
 @onready var ball_cam: Camera3D = $"../PlayerBall/Camera3D"
@@ -11,7 +11,7 @@ var launched := false
 
 
 func _ready() -> void:
-	ball_cam.make_current()
+	player_cam.make_current()
 
 
 func _input(_event: InputEvent) -> void:
