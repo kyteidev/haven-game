@@ -5,7 +5,12 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
 @onready var player_manager = get_tree().get_first_node_in_group("player_manager")
+@onready var collision: CollisionShape3D = $CollisionShape3D
 
+
+func _ready() -> void:
+	visible = true
+	collision.disabled = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

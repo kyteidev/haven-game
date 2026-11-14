@@ -53,6 +53,10 @@ func _input(event: InputEvent) -> void:
 		camera_offset = camera.position
 		camera.reparent(get_tree().current_scene)
 		
+		var player: CharacterBody3D = get_tree().get_first_node_in_group("player_controller")
+		player.visible = false
+		player.get_node("./CollisionShape3D").disabled = true
+		
 		var forward: Vector3 = get_global_transform_interpolated().basis.z
 		apply_impulse(forward * launch_speed * -1)
 		
