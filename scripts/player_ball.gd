@@ -2,6 +2,8 @@ extends RigidBody3D
 
 @onready var arrow: Node3D = $Arrow
 
+@onready var player_manager = get_tree().get_first_node_in_group("player_manager")
+
 
 var sensitivity := 0.001
 var max_tilt: float = deg_to_rad(80)
@@ -19,6 +21,9 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
+	if player_manager.mode != PlayerManager.PlayerMode.BALL:
+		return
+		
 	# camera movement
 	if event is InputEventMouseMotion:
 		rotation.x -= event.relative.y * sensitivity

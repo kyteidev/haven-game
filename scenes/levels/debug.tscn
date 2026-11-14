@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5kl7j7jltcox"]
 
 [ext_resource type="PackedScene" uid="uid://64bjmsm54gec" path="res://scenes/objects/player_ball.tscn" id="1_nwlxf"]
+[ext_resource type="PackedScene" uid="uid://4a0nbdswjslw" path="res://scenes/PlayerManager.tscn" id="1_ulekh"]
 [ext_resource type="PackedScene" uid="uid://dgl8akvthj6bn" path="res://scenes/player.tscn" id="2_p0r41"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0q0uo"]
@@ -14,7 +15,10 @@ uv1_scale = Vector3(4.24, 4.24, 4.24)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p0r41"]
 
-[node name="Node3D" type="Node3D" unique_id=1547421401]
+[node name="DebugRoom" type="Node3D" unique_id=1547421401]
+
+[node name="PlayerManager" parent="." unique_id=1846238950 groups=["player_manager"] instance=ExtResource("1_ulekh")]
+unique_name_in_owner = true
 
 [node name="PlayerBall" parent="." unique_id=622034895 instance=ExtResource("1_nwlxf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55306625, 4.2866244, 22.442886)
