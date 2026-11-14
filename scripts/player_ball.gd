@@ -50,7 +50,7 @@ func _input(event: InputEvent) -> void:
 		lock_camera = true
 		gravity_scale = 1.0
 		
-		camera_offset = camera.position
+		camera_offset = camera.global_position - global_position
 		camera.reparent(get_tree().current_scene)
 		
 		var player: CharacterBody3D = get_tree().get_first_node_in_group("player_controller")
