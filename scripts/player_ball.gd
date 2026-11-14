@@ -1,11 +1,17 @@
 extends RigidBody3D
 
+@onready var camera_pivot: Node3D = $CameraPivot
+@onready var camera_pitch: Node3D = $CameraPivot/CameraPitch
 
-# Called when the node enters the scene tree for the first time.
+var sensitivity := 0.001
+
 func _ready() -> void:
-	pass # Replace with function body.
+	gravity_scale = 0.0
+	
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		camera_pivot.rotate_y(-event.relative.x * sensitivity)
+		camera_pitch.rotate_x(-event.relative.y * sensitivity)

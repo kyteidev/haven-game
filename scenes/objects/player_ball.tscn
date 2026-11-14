@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://64bjmsm54gec"]
 
 [ext_resource type="Script" uid="uid://j7yatud2ev0" path="res://scripts/player_ball.gd" id="1_0bcqr"]
+[ext_resource type="PackedScene" uid="uid://d0n1xusi000l6" path="res://assets/arrow.fbx" id="2_hrn2t"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_nxcxh"]
 
@@ -12,3 +13,16 @@ script = ExtResource("1_0bcqr")
 shape = SubResource("SphereShape3D_nxcxh")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1015660767]
+
+[node name="Arrow" parent="." unique_id=379823709 instance=ExtResource("2_hrn2t")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=59953592]
+
+[node name="CameraPitch" type="Node3D" parent="CameraPivot" unique_id=1637551986]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/CameraPitch" unique_id=1200204405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4182138, 2.3492465)
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=134444109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1345199, 1.2834551)
