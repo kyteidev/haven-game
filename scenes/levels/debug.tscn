@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bqh6wfvv5dtor" path="res://scenes/hud.tscn" id="9_8dtf1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xs65t"]
-size = Vector3(12.234556, 0.011444092, 4.0073166)
+size = Vector3(12.234556, 0.001, 4.0073166)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gd5e8"]
 albedo_texture = ExtResource("3_h7x1a")
@@ -34,7 +34,7 @@ script = ExtResource("1_gd5e8")
 [node name="PlayerManager" parent="." unique_id=1846238950 groups=["player_manager"] instance=ExtResource("1_ulekh")]
 
 [node name="PlayerBall" parent="." unique_id=622034895 instance=ExtResource("1_nwlxf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55306625, -0.33723366, 22.442886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4580102, -0.33723366, 26.99157)
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1455084349]
 
@@ -48,14 +48,21 @@ transform = Transform3D(11.742899, 0, 0, 0, 13.933325, 0, 0, 0, 11.987598, 0.316
 material_override = SubResource("StandardMaterial3D_gd5e8")
 mesh = SubResource("PlaneMesh_p0r41")
 
+[node name="Roof" type="StaticBody3D" parent="." unique_id=1735605972]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.6832123, 33.965637)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Roof" unique_id=1661440234]
+transform = Transform3D(10.04, 0, 0, 0, 10.04, 0, 0, 0, 10.04, -3.596878, -1.0248331, 11.89789)
+shape = SubResource("BoxShape3D_xs65t")
+debug_fill = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Roof" unique_id=621375995]
+transform = Transform3D(11.742899, 0, 0, 0, 13.933325, 0, 0, 0, 11.987598, 0.31736445, -0.2344935, 13.62636)
+material_override = SubResource("StandardMaterial3D_gd5e8")
+mesh = SubResource("PlaneMesh_p0r41")
+
 [node name="Player" parent="." unique_id=1997340143 instance=ExtResource("2_p0r41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12481308, 1.7014904, 17.432749)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1820409207]
-transform = Transform3D(0.9137112, 0.37541857, -0.15554015, -0.10340881, 0.58496845, 0.80443686, 0.39298666, -0.7189387, 0.57331383, 0, 7.2162514, 0)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=601486590]
-transform = Transform3D(1, 0, 0, 0, 0.29993182, 0.95396066, 0, -0.95396066, 0.29993182, 0, 9.408808, 0)
 
 [node name="WinArea" type="Area3D" parent="." unique_id=89436523]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.979961)
@@ -219,7 +226,7 @@ shape = SubResource("BoxShape3D_rovxw")
 [node name="Objects" type="Node3D" parent="." unique_id=1431161708]
 
 [node name="armchair_1_32" parent="Objects" unique_id=1442875759 instance=ExtResource("3_ulekh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9777466, -0.8745646, 14.709076)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27382886, -0.8745646, 19.491251)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Objects/armchair_1_32" unique_id=102094022]
 
@@ -231,5 +238,14 @@ shape = SubResource("BoxShape3D_btb5y")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.553251, -1.3268528, 17.435326)
 
 [node name="Hud" parent="." unique_id=1645712919 instance=ExtResource("9_8dtf1")]
+
+[node name="Light" type="Node3D" parent="." unique_id=363536894]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light" unique_id=1820409207]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.15755606, 0.87726974, 19.98067)
+light_energy = 4.84
+shadow_bias = 0.0
+spot_range = 4.7725234
+spot_angle = 72.10894
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
