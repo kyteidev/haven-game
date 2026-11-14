@@ -23,6 +23,9 @@ func _ready() -> void:
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("switch_mode"):
+		if launched:
+			return
+
 		mode = PlayerMode.BALL if mode == PlayerMode.PLAYER else PlayerMode.PLAYER
 
 		match mode:

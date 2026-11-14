@@ -10,3 +10,5 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	launch_bar.value = player_manager.launch_speed
+
+	launch_bar.visible = player_manager.mode == PlayerManager.PlayerMode.BALL
