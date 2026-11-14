@@ -34,7 +34,7 @@ shape = SubResource("BoxShape3D_xs65t")
 debug_fill = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=2056608086]
-transform = Transform3D(10.404538, 0, 0, 0, 13.933327, 0, 0, 0, 13.543832, 0.4804144, -0.8780053, 18.527685)
+transform = Transform3D(11.742899, 0, 0, 0, 13.933325, 0, 0, 0, 11.987598, 0.4804144, -0.8780053, 17.387323)
 material_override = SubResource("StandardMaterial3D_gd5e8")
 mesh = SubResource("PlaneMesh_p0r41")
 
