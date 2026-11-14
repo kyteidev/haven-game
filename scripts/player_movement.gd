@@ -23,9 +23,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera_pivot.rotate_x(-event.relative.y * mouse_sensitivity)
 		camera_pivot.rotation.x = clamp(camera_pivot.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 
-	if event.is_action_pressed("ui_cancel"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
