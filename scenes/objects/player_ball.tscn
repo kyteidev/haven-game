@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://64bjmsm54gec"]
 
+[ext_resource type="Script" uid="uid://j7yatud2ev0" path="res://scripts/player_ball.gd" id="1_0bcqr"]
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_nxcxh"]
 
 [node name="PlayerBall" type="RigidBody3D" unique_id=622034895]
 gravity_scale = 0.0
+script = ExtResource("1_0bcqr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=132194720]
 shape = SubResource("SphereShape3D_nxcxh")
