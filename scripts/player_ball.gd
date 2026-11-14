@@ -4,12 +4,7 @@ extends RigidBody3D
 @onready var camera: Camera3D = $Camera3D
 @onready var player_manager = get_tree().get_first_node_in_group("player_manager")
 
-<<<<<<< HEAD
-var sensitivity := 0.001
-=======
-
 var sensitivity := 0.03
->>>>>>> 95f8bf5b11db1bbfcdc010ce479a7c25f0b0ab5e
 var max_tilt: float = deg_to_rad(80)
 
 var ball_moving := false
