@@ -26,10 +26,10 @@ func _input(event: InputEvent) -> void:
 		
 	# camera movement
 	if event is InputEventMouseMotion:
-		rotation.x -= event.relative.y * sensitivity
+		rotation.x -= event.screen_relative.y * sensitivity
 		rotation.x = clamp(rotation.x, -max_tilt, max_tilt)
 		
-		rotation.y += -event.relative.x * sensitivity
+		rotation.y += -event.screen_relative.x * sensitivity
 		
 	# launching ball
 	if Input.is_action_just_pressed("kick_ball") and not ball_moving:
