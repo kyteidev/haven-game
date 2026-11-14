@@ -6,14 +6,15 @@ enum PlayerMode {
 	PLAYER,
 }
 
-var mode := PlayerMode.BALL
+var mode := PlayerMode.PLAYER
+var launched := false
 
 @onready var ball_cam: Camera3D = $"../PlayerBall/Camera3D"
-@onready var player_cam: Camera3D = $"../Player/Camera3D"
+@onready var player_cam: Camera3D = $"../Player/CameraPivot/Camera3D"
 
 
 func _ready() -> void:
-	ball_cam.make_current()
+	player_cam.make_current()
 
 
 func _input(_event: InputEvent) -> void:
