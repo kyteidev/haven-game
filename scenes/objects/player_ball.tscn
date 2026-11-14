@@ -20,6 +20,3 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1200204405]
 transform = Transform3D(0.99978065, -0.003636613, 0.020624258, 0, 0.9848077, 0.17364818, -0.02094242, -0.17361009, 0.9845917, 0, 1.2, 2)
 current = true
-
-[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=134444109]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1345199, 1.2834551)

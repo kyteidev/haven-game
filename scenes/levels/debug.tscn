@@ -5,11 +5,11 @@
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0q0uo"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8neu0"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nwlxf"]
 load_path = "res://.godot/imported/wood_4.png-c0ed881cb59650264f84ed82c14898fe.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nwlxf"]
-albedo_texture = SubResource("CompressedTexture2D_8neu0")
+albedo_texture = SubResource("CompressedTexture2D_nwlxf")
 uv1_scale = Vector3(4.24, 4.24, 4.24)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p0r41"]
