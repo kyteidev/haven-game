@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c73hpui70hhyo"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_b0hx8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8neu0"]
+load_path = "res://.godot/imported/wood_4.png-c0ed881cb59650264f84ed82c14898fe.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6bhp"]
+albedo_texture = SubResource("CompressedTexture2D_8neu0")
+uv1_scale = Vector3(4, 4, 4)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_btb5y"]
+
+[node name="Node3D" type="Node3D" unique_id=1547421401]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=742250146]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1569303471]
+transform = Transform3D(10.71, 0, 0, 0, 10.71, 0, 0, 0, 10.71, -0.034220695, 0.0491578, -1.8848877)
+shape = SubResource("WorldBoundaryShape3D_b0hx8")
+debug_fill = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1678617665]
+transform = Transform3D(83.702, 0, 0, 0, 41.483, 0, 0, 0, 64.625, -0.034220695, -0.12802821, -1.8848877)
+material_override = SubResource("StandardMaterial3D_v6bhp")
+mesh = SubResource("PlaneMesh_btb5y")
