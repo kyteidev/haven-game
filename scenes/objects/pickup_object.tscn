@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ddeyc331gw3vn"]
+
+[ext_resource type="Script" uid="uid://c5noahm3fv0a0" path="res://scripts/pickup_object.gd" id="1_e011h"]
+[ext_resource type="PackedScene" uid="uid://1ftu2bpy5inh" path="res://assets/gold_bar_pcs_1.glb" id="1_uu8dg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nxcxh"]
+size = Vector3(0.2, 0.05, 0.1)
+
+[node name="PickupObject" type="Node3D" unique_id=772132052]
+script = ExtResource("1_e011h")
+
+[node name="gold_bar_pcs_12" parent="." unique_id=1966841756 instance=ExtResource("1_uu8dg")]
+
+[node name="StaticBody3D" type="Area3D" parent="gold_bar_pcs_12" unique_id=1695031748]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gold_bar_pcs_12/StaticBody3D" unique_id=959926885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025365017, 0)
+shape = SubResource("BoxShape3D_nxcxh")
+
+[connection signal="body_entered" from="gold_bar_pcs_12/StaticBody3D" to="." method="_on_static_body_3d_body_entered"]
