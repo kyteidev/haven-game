@@ -16,6 +16,7 @@ uv1_scale = Vector3(4, 4, 4)
 [node name="Node3D" type="Node3D" unique_id=1547421401]
 
 [node name="PlayerBall" parent="." unique_id=622034895 instance=ExtResource("1_nwlxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.119419, 36.739994)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1455084349]
 
