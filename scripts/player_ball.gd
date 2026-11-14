@@ -1,6 +1,7 @@
 extends RigidBody3D
 
-@onready var arrow: Node3D = $Ball/Arrow
+@onready var arrow: Node3D = $Arrow
+
 
 var sensitivity := 0.001
 var max_tilt: float = deg_to_rad(80)
