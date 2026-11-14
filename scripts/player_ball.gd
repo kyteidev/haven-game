@@ -5,7 +5,7 @@ extends RigidBody3D
 @onready var player_manager = get_tree().get_first_node_in_group("player_manager")
 
 
-var sensitivity := 0.001
+var sensitivity := 0.03
 var max_tilt: float = deg_to_rad(80)
 
 var ball_moving := false
@@ -13,23 +13,30 @@ var ball_moving := false
 var launch_speed := 20.0
 var direction: Vector2
 
+var mouse_delta := Vector2.ZERO
+
 func _ready() -> void:
 	gravity_scale = 0.0
 	arrow.visible = true
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+
+func _physics_process(delta: float) -> void:
+	rotation.x -= mouse_delta.y * sensitivity * delta
+	rotation.x = clamp(rotation.x, -max_tilt, max_tilt)
+	
+	rotation.y += -mouse_delta.x * sensitivity * delta
+	
+	mouse_delta = Vector2.ZERO
 
 
 func _input(event: InputEvent) -> void:
 	if player_manager.mode != PlayerManager.PlayerMode.BALL:
 		return
 		
-	# camera movement
 	if event is InputEventMouseMotion:
-		rotation.x -= event.screen_relative.y * sensitivity
-		rotation.x = clamp(rotation.x, -max_tilt, max_tilt)
-		
-		rotation.y += -event.screen_relative.x * sensitivity
+		mouse_delta += event.screen_relative
 		
 	# launching ball
 	if Input.is_action_just_pressed("kick_ball") and not ball_moving:
