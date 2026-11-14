@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b5kl7j7jltcox"]
 
+[ext_resource type="PackedScene" uid="uid://64bjmsm54gec" path="res://scenes/objects/player_ball.tscn" id="1_nwlxf"]
+
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0q0uo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8neu0"]
@@ -12,6 +14,8 @@ uv1_scale = Vector3(4, 4, 4)
 [sub_resource type="PlaneMesh" id="PlaneMesh_p0r41"]
 
 [node name="Node3D" type="Node3D" unique_id=1547421401]
+
+[node name="PlayerBall" parent="." unique_id=622034895 instance=ExtResource("1_nwlxf")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1455084349]
 
