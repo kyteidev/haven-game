@@ -49,6 +49,7 @@ func _input(event: InputEvent) -> void:
 		arrow.visible = false
 		lock_camera = true
 		gravity_scale = 1.0
+		player_manager.launched = true
 		
 		camera_offset = camera.global_position - global_position
 		camera.reparent(get_tree().current_scene)

@@ -4,6 +4,7 @@ extends Node3D
 enum PlayerMode { BALL, PLAYER }
 
 var mode := PlayerMode.BALL
+var launched := false
 
 @onready var ball_cam: Camera3D = $"../PlayerBall/Camera3D"
 @onready var player_cam: Camera3D = $"../Player/Camera3D"

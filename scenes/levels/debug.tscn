@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b5kl7j7jltcox"]
 
+[ext_resource type="Script" uid="uid://cfle2ward5enw" path="res://scripts/level.gd" id="1_gd5e8"]
 [ext_resource type="PackedScene" uid="uid://64bjmsm54gec" path="res://scenes/objects/player_ball.tscn" id="1_nwlxf"]
 [ext_resource type="PackedScene" uid="uid://4a0nbdswjslw" path="res://scenes/PlayerManager.tscn" id="1_ulekh"]
 [ext_resource type="PackedScene" uid="uid://dgl8akvthj6bn" path="res://scenes/player.tscn" id="2_p0r41"]
@@ -19,7 +20,11 @@ uv1_scale = Vector3(11.85, 11.85, 11.85)
 [sub_resource type="BoxShape3D" id="BoxShape3D_btb5y"]
 size = Vector3(1.4088135, 1.9165039, 0.93847656)
 
-[node name="Node3D" type="Node3D" unique_id=1547421401]
+[sub_resource type="BoxShape3D" id="BoxShape3D_nxcxh"]
+size = Vector3(5, 1, 3)
+
+[node name="DebugLevel" type="Node3D" unique_id=1547421401]
+script = ExtResource("1_gd5e8")
 
 [node name="PlayerManager" parent="." unique_id=1846238950 groups=["player_manager"] instance=ExtResource("1_ulekh")]
 
@@ -58,3 +63,12 @@ shape = SubResource("BoxShape3D_btb5y")
 
 [node name="arc_1_wall_12" parent="." unique_id=1517068151 instance=ExtResource("5_04m7m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.553251, -1.3268528, 17.435326)
+
+[node name="WinArea" type="Area3D" parent="." unique_id=89436523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.979961)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WinArea" unique_id=1400160962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38738942, 0, 0)
+shape = SubResource("BoxShape3D_nxcxh")
+
+[connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
