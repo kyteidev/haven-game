@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://64bjmsm54gec" path="res://scenes/objects/player_ball.tscn" id="1_nwlxf"]
 [ext_resource type="PackedScene" uid="uid://dgl8akvthj6bn" path="res://scenes/player.tscn" id="2_p0r41"]
+[ext_resource type="PackedScene" uid="uid://b7i5p8vuo14uq" path="res://assets/armchair_1_3.glb" id="3_ulekh"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0q0uo"]
 
@@ -14,10 +15,13 @@ uv1_scale = Vector3(4.24, 4.24, 4.24)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p0r41"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_btb5y"]
+size = Vector3(1.4088135, 1.9165039, 0.93847656)
+
 [node name="Node3D" type="Node3D" unique_id=1547421401]
 
 [node name="PlayerBall" parent="." unique_id=622034895 instance=ExtResource("1_nwlxf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55306625, 4.2866244, 22.442886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55306625, -0.33723366, 22.442886)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1455084349]
 
@@ -27,7 +31,7 @@ shape = SubResource("WorldBoundaryShape3D_0q0uo")
 debug_fill = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=2056608086]
-transform = Transform3D(28.696, 0, 0, 0, 14.217, 0, 0, 0, 22.153, -0.034220695, -0.12802821, -1.8848877)
+transform = Transform3D(10.404538, 0, 0, 0, 13.933327, 0, 0, 0, 13.543832, 0.4804144, -0.8780053, 18.527685)
 material_override = SubResource("StandardMaterial3D_nwlxf")
 mesh = SubResource("PlaneMesh_p0r41")
 
@@ -39,3 +43,12 @@ transform = Transform3D(0.9137112, 0.37541857, -0.15554015, -0.10340881, 0.58496
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=601486590]
 transform = Transform3D(1, 0, 0, 0, 0.29993182, 0.95396066, 0, -0.95396066, 0.29993182, 0, 9.408808, 0)
+
+[node name="armchair_1_32" parent="." unique_id=1442875759 instance=ExtResource("3_ulekh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9777466, -0.8745646, 7.215967)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="armchair_1_32" unique_id=102094022]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="armchair_1_32/StaticBody3D" unique_id=1153508271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03289795, 0.45825195, 0.47598422)
+shape = SubResource("BoxShape3D_btb5y")
