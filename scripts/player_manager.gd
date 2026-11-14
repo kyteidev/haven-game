@@ -1,7 +1,10 @@
 class_name PlayerManager
 extends Node3D
 
-enum PlayerMode { BALL, PLAYER }
+enum PlayerMode {
+	BALL,
+	PLAYER,
+}
 
 var mode := PlayerMode.BALL
 
@@ -16,7 +19,7 @@ func _ready() -> void:
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("switch_mode"):
 		mode = PlayerMode.BALL if mode == PlayerMode.PLAYER else PlayerMode.PLAYER
-		
+
 		match mode:
 			PlayerMode.BALL:
 				ball_cam.make_current()
