@@ -1,17 +1,19 @@
-extends RigidBody3D
+extends Node3D
 
-@onready var camera_pivot: Node3D = $CameraPivot
-@onready var camera_pitch: Node3D = $CameraPivot/CameraPitch
+@onready var ball: RigidBody3D = $Ball
 
 var sensitivity := 0.001
+var max_tilt: float = deg_to_rad(80)
 
 func _ready() -> void:
-	gravity_scale = 0.0
+	ball.gravity_scale = 0.0
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		camera_pivot.rotate_y(-event.relative.x * sensitivity)
-		camera_pitch.rotate_x(-event.relative.y * sensitivity)
+		ball.rotation.x -= event.relative.y * sensitivity
+		ball.rotation.x = clamp(ball.rotation.x, -max_tilt, max_tilt)
+		
+		ball.rotation.y += -event.relative.x * sensitivity
