@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5kl7j7jltcox"]
 
 [ext_resource type="PackedScene" uid="uid://64bjmsm54gec" path="res://scenes/objects/player_ball.tscn" id="1_nwlxf"]
+[ext_resource type="PackedScene" uid="uid://dgl8akvthj6bn" path="res://scenes/player.tscn" id="2_p0r41"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0q0uo"]
 
@@ -9,14 +10,14 @@ load_path = "res://.godot/imported/wood_4.png-c0ed881cb59650264f84ed82c14898fe.s
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nwlxf"]
 albedo_texture = SubResource("CompressedTexture2D_8neu0")
-uv1_scale = Vector3(4, 4, 4)
+uv1_scale = Vector3(4.24, 4.24, 4.24)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p0r41"]
 
 [node name="Node3D" type="Node3D" unique_id=1547421401]
 
 [node name="PlayerBall" parent="." unique_id=622034895 instance=ExtResource("1_nwlxf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.119419, 36.739994)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55306625, 4.2866244, 22.442886)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1455084349]
 
@@ -26,6 +27,15 @@ shape = SubResource("WorldBoundaryShape3D_0q0uo")
 debug_fill = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=2056608086]
-transform = Transform3D(83.702, 0, 0, 0, 41.483, 0, 0, 0, 64.625, -0.034220695, -0.12802821, -1.8848877)
+transform = Transform3D(28.696, 0, 0, 0, 14.217, 0, 0, 0, 22.153, -0.034220695, -0.12802821, -1.8848877)
 material_override = SubResource("StandardMaterial3D_nwlxf")
 mesh = SubResource("PlaneMesh_p0r41")
+
+[node name="Player" parent="." unique_id=1997340143 instance=ExtResource("2_p0r41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12481308, 1.7014904, -0.17328262)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1820409207]
+transform = Transform3D(0.9137112, 0.37541857, -0.15554015, -0.10340881, 0.58496845, 0.80443686, 0.39298666, -0.7189387, 0.57331383, 0, 7.2162514, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=601486590]
+transform = Transform3D(1, 0, 0, 0, 0.29993182, 0.95396066, 0, -0.95396066, 0.29993182, 0, 9.408808, 0)
