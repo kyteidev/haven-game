@@ -9,6 +9,7 @@ func _ready() -> void:
 func show_win_screen() -> void:
 	get_tree().paused = true
 	visible = true
+	StateManager.win_shown = true
 
 
 # is actually next level
@@ -17,6 +18,7 @@ func _on_restart_button_pressed() -> void:
 	get_tree().change_scene_to_file(
 		"res://scenes/levels/level_" + str(LevelsManager.current_level) + ".tscn"
 	)
+	StateManager.win_shown = false
 
 
 func _on_menu_button_pressed() -> void:

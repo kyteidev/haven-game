@@ -12,6 +12,9 @@ func _input(_event: InputEvent) -> void:
 
 
 func _toggle_pause() -> void:
+	if StateManager.win_shown:
+		return
+
 	visible = not visible
 	get_tree().paused = not get_tree().paused
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if get_tree().paused else Input.MOUSE_MODE_CAPTURED
