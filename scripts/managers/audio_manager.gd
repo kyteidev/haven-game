@@ -38,6 +38,4 @@ func play_sfx(sound_name: String, position: Vector3) -> void:
 	player.global_position = position
 	player.play()
 
-	print("play")
-
 	player.finished.connect(player.queue_free)

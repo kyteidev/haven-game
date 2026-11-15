@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dhdv0hy3k6jpm" path="res://assets/wardrobe_mp_1_1_wood_3.png" id="3_tv7cl"]
 [ext_resource type="PackedScene" uid="uid://kwmkuxqcqod5" path="res://assets/ceiling_lamp_mp_1_1_off.glb" id="4_sibr7"]
 [ext_resource type="PackedScene" uid="uid://dgl8akvthj6bn" path="res://scenes/player.tscn" id="5_lkn2k"]
-[ext_resource type="PackedScene" uid="uid://ch4mfb1jx25d8" path="res://assets/bed_5_4.glb" id="5_r88tb"]
+[ext_resource type="PackedScene" uid="uid://bj0k01aoxef05" path="res://assets/bed_5_4.glb" id="5_r88tb"]
 [ext_resource type="PackedScene" uid="uid://1l4deag0dlm3" path="res://assets/wall_2_2.glb" id="9_1c1qw"]
 [ext_resource type="PackedScene" uid="uid://bqh6wfvv5dtor" path="res://scenes/hud.tscn" id="12_7d3nu"]
 [ext_resource type="PackedScene" uid="uid://b8i4ujvwufc3" path="res://scenes/menus/pause_menu.tscn" id="13_r6ket"]
