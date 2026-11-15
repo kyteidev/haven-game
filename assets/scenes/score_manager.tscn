@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bdo8cytvhci5k"]
+
+[ext_resource type="Script" uid="uid://656tcu4a88jp" path="res://scripts/managers/score_manager.gd" id="1_sgrrx"]
+
+[node name="ScoreManager" type="Node3D" unique_id=1155964808]
+script = ExtResource("1_sgrrx")
