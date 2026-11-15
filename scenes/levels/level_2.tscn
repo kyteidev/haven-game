@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://ddeyc331gw3vn" path="res://scenes/objects/pickup_object.tscn" id="19_p4se4"]
 [ext_resource type="PackedScene" uid="uid://415yn1blvw8f" path="res://scenes/objects/pickup_objects/gold_bar.tscn" id="20_lkn2k"]
 [ext_resource type="PackedScene" uid="uid://fsqucpibiviq" path="res://scenes/objects/pickup_objects/gay_card.tscn" id="21_sbygb"]
+[ext_resource type="PackedScene" uid="uid://jx5mjxm8cgg2" path="res://scenes/menus/win_menu.tscn" id="23_wikm6"]
+[ext_resource type="PackedScene" uid="uid://dpmtkpm7b20ri" path="res://scenes/menus/death_menu.tscn" id="24_1c1qw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joiyc"]
 size = Vector3(12.234556, 0.001, 4.0073166)
@@ -260,6 +262,10 @@ object = ExtResource("20_lkn2k")
 [node name="PickupObject2" parent="PickupObjects" unique_id=1740615083 instance=ExtResource("19_p4se4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.945982, -1.0708468, 17.437527)
 object = ExtResource("21_sbygb")
+
+[node name="WinMenu" parent="." unique_id=1667583396 instance=ExtResource("23_wikm6")]
+
+[node name="DeathMenu" parent="." unique_id=1114558071 instance=ExtResource("24_1c1qw")]
 
 [node name="WinArea" type="Area3D" parent="." unique_id=169531835]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50901365, 0, 27.9749)
