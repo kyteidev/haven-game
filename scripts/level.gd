@@ -11,6 +11,5 @@ func _ready() -> void:
 
 
 func _on_win_area_body_entered(_body: Node3D) -> void:
-	print(StateManager.score, score_manager.objects.size())
 	if player_manager.launched and StateManager.score == score_manager.objects.size():
 		win_menu.show_win_screen()
