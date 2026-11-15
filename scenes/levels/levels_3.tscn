@@ -88,7 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8819667, 1.914954, 21.55342
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.6832123, 33.965637)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Roof" unique_id=1551335347]
-transform = Transform3D(10.04, 0, 0, 0, 10.04, 0, 0, 0, 10.04, -3.596878, -1.0248331, 11.89789)
+transform = Transform3D(10.04, 0, 0, 0, 10.04, 0, 0, 0, 10.04, -3.596878, -0.22624195, 11.89789)
 shape = SubResource("BoxShape3D_ds2qy")
 debug_fill = false
 
