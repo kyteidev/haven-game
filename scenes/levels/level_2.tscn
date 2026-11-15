@@ -45,7 +45,7 @@ size = Vector3(3.5307007, 1.2380981, 1.2563477)
 [node name="PlayerManager" parent="." unique_id=1846238950 groups=["player_manager"] instance=ExtResource("1_v8d84")]
 
 [node name="PlayerBall" parent="." unique_id=436715049 instance=ExtResource("2_gw1l3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2751756, -0.3372332, 20.921078)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0456467, -0.3372332, 20.921078)
 collision_layer = 1
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1977328822]
@@ -204,7 +204,7 @@ shape = SubResource("BoxShape3D_btb5y")
 transform = Transform3D(-0.79322726, 0, -0.60892594, 0, 1, 0, 0.60892594, 0, -0.79322726, -6.2380505, -1.0719063, 16.579748)
 
 [node name="tv_table_4_12" parent="Objects" unique_id=1433901003 instance=ExtResource("13_sibr7")]
-transform = Transform3D(-0.02690734, 0, -0.99963796, 0, 1, 0, 0.99963796, 0, -0.02690734, -3.98554, -1.0719062, 17.592402)
+transform = Transform3D(-0.02690734, 0, -0.99963796, 0, 1, 0, 0.99963796, 0, -0.02690734, -3.98554, -1.0719062, 17.068077)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Objects/tv_table_4_12" unique_id=1102115763]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24010086, 0, -0.3882947)
