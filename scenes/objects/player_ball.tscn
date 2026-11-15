@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://64bjmsm54gec"]
 
 [ext_resource type="Script" uid="uid://j7yatud2ev0" path="res://scripts/player_ball.gd" id="1_0bcqr"]
-[ext_resource type="PackedScene" path="res://assets/arrow.fbx" id="2_hrn2t"]
+[ext_resource type="PackedScene" uid="uid://duu1rfyeb1kwf" path="res://assets/arrow.fbx" id="2_hrn2t"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3vyb7"]
 bounce = 0.9
