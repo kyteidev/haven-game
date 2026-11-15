@@ -261,8 +261,8 @@ process_mode = 3
 [node name="WorldEnvironment" parent="." unique_id=489330093 instance=ExtResource("10_m3dw6")]
 
 [node name="ScoreManager" parent="." unique_id=1155964808 node_paths=PackedStringArray("objects") instance=ExtResource("12_vuesn")]
-objects = [NodePath("../PickupObjects/PickupObject"), NodePath("../PickupObjects/PickupObject2")]
-objects_left = Array[String](["GoldBar", "Gold Bar"])
+objects = [NodePath("../PickupObjects/PickupObject")]
+objects_left = Array[String](["GoldBar"])
 
 [node name="WinMenu" parent="." unique_id=1031971028 instance=ExtResource("13_uvexj")]
 
@@ -270,10 +270,6 @@ objects_left = Array[String](["GoldBar", "Gold Bar"])
 
 [node name="PickupObject" parent="PickupObjects" unique_id=772132052 instance=ExtResource("12_ubo8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23292112, -0.73533475, 23.001251)
-object = ExtResource("13_vuesn")
-
-[node name="PickupObject2" parent="PickupObjects" unique_id=809065809 instance=ExtResource("12_ubo8g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4774685, -0.73533475, 23.001251)
 object = ExtResource("13_vuesn")
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
