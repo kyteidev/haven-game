@@ -40,6 +40,7 @@ enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg")
 player_manager=""
 player_controller=""
 player_ball=""
+score_manager=""
 
 [input]
 
