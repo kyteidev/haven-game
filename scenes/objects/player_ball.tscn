@@ -21,6 +21,8 @@ shape = SubResource("SphereShape3D_nxcxh")
 [node name="Arrow" parent="." unique_id=379823709 instance=ExtResource("2_hrn2t")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1200204405]
-transform = Transform3D(0.99978065, -0.003636613, 0.020624258, 0, 0.9848077, 0.17364818, -0.02094242, -0.17361009, 0.9845917, 0, 1.2, 2)
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1569675090]
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1200204405]
+transform = Transform3D(0.9997807, -0.0036366135, 0.02062426, 0, 0.9848078, 0.17364818, -0.020942422, -0.1736101, 0.9845918, 0, 1.6358562, 2)
 current = true
