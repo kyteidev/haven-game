@@ -11,6 +11,7 @@ var bgm_tracks := [
 func _ready() -> void:
 	await get_tree().process_frame
 	get_tree().root.add_child(bgm_player)
+	bgm_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	bgm_player.finished.connect(
 		func() -> void:
 			get_tree().create_timer(randf_range(4.0, 8.0)).timeout.connect(play_bgm),
