@@ -79,3 +79,7 @@ func _input(event: InputEvent) -> void:
 
 		var forward: Vector3 = get_global_transform_interpolated().basis.z
 		apply_impulse(forward * launch_speed * -1)
+
+
+func _on_body_entered(_body: Node) -> void:
+	AudioManager.play_sfx("ball_bounce", global_position)
