@@ -16,6 +16,9 @@ func show_win_screen() -> void:
 # is actually next level
 func _on_restart_button_pressed() -> void:
 	LevelsManager.current_level += 1
+	if LevelsManager.current_level > LevelsManager.max_level:
+		get_tree().change_scene_to_file("res://scenes/menus/thanks_menu.tscn")
+		return
 	get_tree().change_scene_to_file(
 		"res://scenes/levels/level_" + str(LevelsManager.current_level) + ".tscn"
 	)
