@@ -5,7 +5,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_nxcxh"]
 font_size = 48
 
-[node name="Pausemenu" type="CanvasLayer" unique_id=1645712919]
+[node name="Pausemenu" type="CanvasLayer" unique_id=992544365]
 script = ExtResource("1_fwndu")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=593701712]
