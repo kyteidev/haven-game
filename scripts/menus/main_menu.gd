@@ -3,6 +3,7 @@ extends Node3D
 
 func _ready() -> void:
 	var player := AudioStreamPlayer.new()
+	player.volume_db = -10
 	player.stream = preload("res://assets/sounds/bgm/menu_bgm.mp3")
 
 	await get_tree().process_frame
