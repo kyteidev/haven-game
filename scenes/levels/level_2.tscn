@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://fsqucpibiviq" path="res://scenes/objects/pickup_objects/gay_card.tscn" id="21_sbygb"]
 [ext_resource type="PackedScene" uid="uid://jx5mjxm8cgg2" path="res://scenes/menus/win_menu.tscn" id="23_wikm6"]
 [ext_resource type="PackedScene" uid="uid://dpmtkpm7b20ri" path="res://scenes/menus/death_menu.tscn" id="24_1c1qw"]
+[ext_resource type="PackedScene" uid="uid://bnb60s43xpc67" path="res://assets/tv_mp_1_1.glb" id="25_1c1qw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joiyc"]
 size = Vector3(12.234556, 0.001, 4.0073166)
@@ -74,7 +75,7 @@ mesh = SubResource("PlaneMesh_oftal")
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.6832123, 33.965637)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Roof" unique_id=1672226620]
-transform = Transform3D(10.04, 0, 0, 0, 10.04, 0, 0, 0, 10.04, -3.596878, -1.0248331, 11.89789)
+transform = Transform3D(10.04, 0, 0, 0, 10.04, 0, 0, 0, 10.04, -3.596878, -0.41720712, 11.89789)
 shape = SubResource("BoxShape3D_joiyc")
 debug_fill = false
 
@@ -84,7 +85,7 @@ material_override = SubResource("StandardMaterial3D_tn15g")
 mesh = SubResource("PlaneMesh_oftal")
 
 [node name="Player" parent="." unique_id=1997340143 instance=ExtResource("5_lkn2k")]
-transform = Transform3D(-0.9996449, 0, 0.026648792, 0, 1, 0, -0.026648792, 0, -0.9996449, -4.8605046, -0.36959553, 20.030554)
+transform = Transform3D(0.8004291, 0, 0.59942746, 0, 1, 0, -0.59942746, 0, 0.8004291, -4.8605046, -0.36959553, 20.030554)
 collision_layer = 1
 
 [node name="Decor" type="Node3D" parent="." unique_id=2048946513]
@@ -273,5 +274,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50901365, 0, 27.9749)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WinArea" unique_id=303457854]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3785486, -0.6363721, -5.7764606)
 shape = SubResource("BoxShape3D_lkn2k")
+
+[node name="tv_mp_1_12" parent="." unique_id=1529113627 instance=ExtResource("25_1c1qw")]
+transform = Transform3D(0.42694637, 0, -0.90427697, 0, 1, 0, 0.90427697, 0, 0.42694637, -3.8971746, -0.04749632, 16.778881)
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
