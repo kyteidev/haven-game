@@ -34,6 +34,9 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if player_manager.mode != PlayerManager.PlayerMode.BALL:
+		return
+
 	rotation.x -= mouse_delta.y * sensitivity * delta
 	rotation.x = clamp(rotation.x, -max_tilt, max_tilt)
 
