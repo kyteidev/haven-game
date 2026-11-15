@@ -4,7 +4,7 @@ const LAUNCH_SPEED_INCREASE_RATE = 10.0
 const MAX_FOV = 120.0
 
 @onready var arrow: Node3D = $Arrow
-@onready var camera: Camera3D = $CameraPivot/SpringArm3D/Camera3D
+@onready var camera: Camera3D = $SpringArm3D/Camera3D
 @onready var player_manager = get_tree().get_first_node_in_group("player_manager")
 
 var sensitivity := 0.03
