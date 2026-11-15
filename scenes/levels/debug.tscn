@@ -264,9 +264,6 @@ objects = [NodePath("../PickupObjects/PickupObject")]
 
 [node name="PickupObjects" type="Node3D" parent="." unique_id=1572399832]
 
-[node name="GoldBar" parent="PickupObjects" unique_id=1856089111 instance=ExtResource("13_vuesn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.168664, 0, 22.60183)
-
 [node name="PickupObject" parent="PickupObjects" unique_id=772132052 instance=ExtResource("12_ubo8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.708117, 0.13601816, 23.001251)
 object = ExtResource("13_vuesn")

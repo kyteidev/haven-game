@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cajcthax6y0b1" path="res://assets/ceiling_fan_mp_1_1_light_off.glb" id="15_ek5fc"]
 [ext_resource type="PackedScene" uid="uid://bn0culmdpy15w" path="res://assets/shelf_mp_4_1.glb" id="16_jauf8"]
 [ext_resource type="PackedScene" uid="uid://y4a27h3hj1xd" path="res://assets/wardrobe_mp_1_1.glb" id="17_02vj6"]
+[ext_resource type="PackedScene" uid="uid://bdo8cytvhci5k" path="res://scenes/score_manager.tscn" id="18_0dnrn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ds2qy"]
 size = Vector3(12.234556, 0.001, 4.0073166)
@@ -311,3 +312,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3738995, -1.0719059, 14.330
 
 [node name="wardrobe_mp_1_14" parent="." unique_id=1605440109 instance=ExtResource("17_02vj6")]
 transform = Transform3D(-0.029261151, 0, -0.9995718, 0, 1, 0, 0.9995718, 0, -0.029261151, 6.0118318, -0.8780141, 19.350725)
+
+[node name="ScoreManager" parent="." unique_id=1155964808 instance=ExtResource("18_0dnrn")]

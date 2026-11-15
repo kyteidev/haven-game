@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cajcthax6y0b1" path="res://assets/ceiling_fan_mp_1_1_light_off.glb" id="15_wwjag"]
 [ext_resource type="PackedScene" uid="uid://bn0culmdpy15w" path="res://assets/shelf_mp_4_1.glb" id="16_rvwo1"]
 [ext_resource type="PackedScene" uid="uid://y4a27h3hj1xd" path="res://assets/wardrobe_mp_1_1.glb" id="17_yxkvy"]
+[ext_resource type="PackedScene" uid="uid://bdo8cytvhci5k" path="res://scenes/score_manager.tscn" id="18_gw1l3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joiyc"]
 size = Vector3(12.234556, 0.001, 4.0073166)
@@ -311,3 +312,5 @@ spot_angle = 72.10894
 process_mode = 3
 
 [node name="WorldEnvironment" parent="." unique_id=489330093 instance=ExtResource("14_xworo")]
+
+[node name="ScoreManager" parent="." unique_id=1155964808 instance=ExtResource("18_gw1l3")]
