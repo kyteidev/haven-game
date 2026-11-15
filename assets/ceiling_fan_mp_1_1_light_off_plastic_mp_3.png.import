@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu8p5v3errd2n"
+uid="uid://csrgfdcfwbfpm"
 path.s3tc="res://.godot/imported/ceiling_fan_mp_1_1_light_off_plastic_mp_3.png-e719d3f0efc6585e622c21a1b6f7cfbd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ec35f19152d57ae11b28c7e0e847dbd7"
 }
 
 [deps]

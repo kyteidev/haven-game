@@ -1,9 +1,0 @@
-[gd_resource type="Environment" format=3 uid="uid://b0lakbeou2upf"]
-
-[resource]
-fog_enabled = true
-fog_light_energy = 0.27
-fog_density = 0.005
-volumetric_fog_enabled = true
-volumetric_fog_emission = Color(0, 0, 0.13607247, 1)
-volumetric_fog_emission_energy = 0.08

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bq3n5rddq5kt4"
-path="res://.godot/imported/wall_1.glb-ea0d915435f0d77b85edc0777edcf0a6.scn"
+uid="uid://c5jvjvl2alcym"
+path="res://.godot/imported/docLorean.fbx-caf53f54a54d73be1e1797df29636c37.scn"
 
 [deps]
 
-source_file="res://scenes/objects/wall_1.glb"
-dest_files=["res://.godot/imported/wall_1.glb-ea0d915435f0d77b85edc0777edcf0a6.scn"]
+source_file="res://assets/docLorean.fbx"
+dest_files=["res://.godot/imported/docLorean.fbx-caf53f54a54d73be1e1797df29636c37.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,6 +40,7 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
-gltf/embedded_image_handling=1
-gltf/texture_map_mode=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2
