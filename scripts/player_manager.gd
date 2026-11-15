@@ -13,7 +13,7 @@ var launched := false
 
 var launch_speed := 0.0
 
-@onready var ball_cam: Camera3D = $"../PlayerBall/SpringArm3D/Camera3D"
+@onready var ball_cam: Camera3D = $"../PlayerBall/CameraPivot/SpringArm3D/Camera3D"
 @onready var player_cam: Camera3D = $"../Player/CameraPivot/Camera3D"
 
 
