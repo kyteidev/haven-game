@@ -7,6 +7,7 @@ func _ready() -> void:
 
 
 func show_win_screen() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().paused = true
 	visible = true
 	StateManager.win_shown = true
