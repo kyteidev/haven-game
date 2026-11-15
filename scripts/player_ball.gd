@@ -26,7 +26,6 @@ var mouse_delta := Vector2.ZERO
 
 func _ready() -> void:
 	gravity_scale = 0.0
-	arrow.visible = true
 
 	camera.fov = 75.0
 
@@ -54,7 +53,11 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if player_manager.mode != PlayerManager.PlayerMode.BALL:
+		arrow.visible = false
 		return
+
+	if not ball_moving:
+		arrow.visible = true
 
 	if event is InputEventMouseMotion and not ball_moving:
 		mouse_delta += event.screen_relative
