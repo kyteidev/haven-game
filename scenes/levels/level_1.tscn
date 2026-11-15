@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://k405s683atu7" path="res://assets/arc_1_wall_1.glb" id="8_bahl2"]
 [ext_resource type="PackedScene" uid="uid://bqh6wfvv5dtor" path="res://scenes/hud.tscn" id="9_np2pn"]
 [ext_resource type="PackedScene" uid="uid://c8qm11lh5pgy1" path="res://scenes/world_environment.tscn" id="10_v6ha0"]
+[ext_resource type="PackedScene" uid="uid://cajcthax6y0b1" path="res://assets/ceiling_fan_mp_1_1_light_off.glb" id="11_excbq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xs65t"]
 size = Vector3(12.234556, 0.001, 4.0073166)
@@ -36,6 +37,7 @@ script = ExtResource("1_qxy0u")
 
 [node name="PlayerBall" parent="." unique_id=622034895 instance=ExtResource("3_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4580102, -0.33723366, 26.99157)
+collision_layer = 1
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1455084349]
 
@@ -64,6 +66,7 @@ mesh = SubResource("PlaneMesh_p0r41")
 
 [node name="Player" parent="." unique_id=1997340143 instance=ExtResource("5_mm8aj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12481308, 1.7014904, 17.432749)
+collision_layer = 1
 
 [node name="WinArea" type="Area3D" parent="." unique_id=89436523]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.979961)
@@ -266,5 +269,8 @@ spot_range = 4.7725234
 spot_angle = 72.10894
 
 [node name="WorldEnvironment" parent="." unique_id=489330093 instance=ExtResource("10_v6ha0")]
+
+[node name="ceiling_fan_mp_1_1_light_off2" parent="." unique_id=1998562917 instance=ExtResource("11_excbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0044448376, 1.8843942, 21.951595)
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
