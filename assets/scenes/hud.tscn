@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bqh6wfvv5dtor"]
+
+[ext_resource type="Script" uid="uid://bokadjtrghnnr" path="res://scripts/hud.gd" id="1_ahhtf"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1645712919]
+script = ExtResource("1_ahhtf")
+
+[node name="LaunchBar" type="ProgressBar" parent="." unique_id=1982073466]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -57.0
+offset_right = 80.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+step = 0.1
+value = 50.0
+show_percentage = false
