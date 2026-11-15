@@ -6,6 +6,7 @@ extends Node3D
 
 func _ready() -> void:
 	StateManager.score = 0
+	AudioManager.play_bgm()
 
 
 func _on_win_area_body_entered(_body: Node3D) -> void:

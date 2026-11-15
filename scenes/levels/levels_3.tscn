@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b8i4ujvwufc3" path="res://scenes/menus/pause_menu.tscn" id="13_ab5i4"]
 [ext_resource type="PackedScene" uid="uid://x0jmdvycu34i" path="res://assets/cardboard_box_2.glb" id="14_0neyr"]
 [ext_resource type="PackedScene" uid="uid://c8qm11lh5pgy1" path="res://scenes/world_environment.tscn" id="14_ivr1w"]
-[ext_resource type="PackedScene" uid="uid://cajcthax6y0b1" path="res://assets/ceiling_fan_mp_1_1_light_off.glb" id="15_ek5fc"]
+[ext_resource type="PackedScene" uid="uid://c0pl6bta7b7h7" path="res://assets/ceiling_fan_mp_1_1_light_off.glb" id="15_ek5fc"]
 [ext_resource type="PackedScene" uid="uid://bn0culmdpy15w" path="res://assets/shelf_mp_4_1.glb" id="16_jauf8"]
 [ext_resource type="PackedScene" uid="uid://y4a27h3hj1xd" path="res://assets/wardrobe_mp_1_1.glb" id="17_02vj6"]
 [ext_resource type="PackedScene" uid="uid://bdo8cytvhci5k" path="res://scenes/score_manager.tscn" id="18_0dnrn"]
