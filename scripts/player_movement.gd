@@ -39,6 +39,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = lerp(velocity.x, direction.x * SPEED, 0.2)
 			velocity.z = lerp(velocity.z, direction.z * SPEED, 0.2)
 		else:
-			velocity = lerp(velocity, Vector3.ZERO, 0.1)
+			velocity.x = lerp(velocity.x, 0.0, 0.1)
+			velocity.z = lerp(velocity.z, 0.0, 0.1)
 
 	move_and_slide()
