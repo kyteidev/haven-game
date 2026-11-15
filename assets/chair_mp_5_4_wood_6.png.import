@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0rehgd4ac577"
 path.s3tc="res://.godot/imported/chair_mp_5_4_wood_6.png-7532d6baa8f48c35d77f63afd132ed7c.s3tc.ctex"
+path.etc2="res://.godot/imported/chair_mp_5_4_wood_6.png-7532d6baa8f48c35d77f63afd132ed7c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/chair_mp_5_4_wood_6.png"
-dest_files=["res://.godot/imported/chair_mp_5_4_wood_6.png-7532d6baa8f48c35d77f63afd132ed7c.s3tc.ctex"]
+dest_files=["res://.godot/imported/chair_mp_5_4_wood_6.png-7532d6baa8f48c35d77f63afd132ed7c.s3tc.ctex", "res://.godot/imported/chair_mp_5_4_wood_6.png-7532d6baa8f48c35d77f63afd132ed7c.etc2.ctex"]
 
 [params]
 

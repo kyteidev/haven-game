@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://clt22c8esil2d"
 path.s3tc="res://.godot/imported/arc_1_wall_1_door_frame_wood_1.png-05fe9af76bfbb6e136087910d58fb2ee.s3tc.ctex"
+path.etc2="res://.godot/imported/arc_1_wall_1_door_frame_wood_1.png-05fe9af76bfbb6e136087910d58fb2ee.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/arc_1_wall_1_door_frame_wood_1.png"
-dest_files=["res://.godot/imported/arc_1_wall_1_door_frame_wood_1.png-05fe9af76bfbb6e136087910d58fb2ee.s3tc.ctex"]
+dest_files=["res://.godot/imported/arc_1_wall_1_door_frame_wood_1.png-05fe9af76bfbb6e136087910d58fb2ee.s3tc.ctex", "res://.godot/imported/arc_1_wall_1_door_frame_wood_1.png-05fe9af76bfbb6e136087910d58fb2ee.etc2.ctex"]
 
 [params]
 

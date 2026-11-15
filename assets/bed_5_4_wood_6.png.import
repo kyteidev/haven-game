@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://qfq4y0u8dykx"
 path.s3tc="res://.godot/imported/bed_5_4_wood_6.png-68f1e83ade83bbbc3db5cb06587fefe2.s3tc.ctex"
+path.etc2="res://.godot/imported/bed_5_4_wood_6.png-68f1e83ade83bbbc3db5cb06587fefe2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/bed_5_4_wood_6.png"
-dest_files=["res://.godot/imported/bed_5_4_wood_6.png-68f1e83ade83bbbc3db5cb06587fefe2.s3tc.ctex"]
+dest_files=["res://.godot/imported/bed_5_4_wood_6.png-68f1e83ade83bbbc3db5cb06587fefe2.s3tc.ctex", "res://.godot/imported/bed_5_4_wood_6.png-68f1e83ade83bbbc3db5cb06587fefe2.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://gfi3w2li6y1h"
 path.s3tc="res://.godot/imported/cardboard_box_2_cardboard_box_2.png-396a2d62fc91562d2ca418ab8f104f47.s3tc.ctex"
+path.etc2="res://.godot/imported/cardboard_box_2_cardboard_box_2.png-396a2d62fc91562d2ca418ab8f104f47.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/cardboard_box_2_cardboard_box_2.png"
-dest_files=["res://.godot/imported/cardboard_box_2_cardboard_box_2.png-396a2d62fc91562d2ca418ab8f104f47.s3tc.ctex"]
+dest_files=["res://.godot/imported/cardboard_box_2_cardboard_box_2.png-396a2d62fc91562d2ca418ab8f104f47.s3tc.ctex", "res://.godot/imported/cardboard_box_2_cardboard_box_2.png-396a2d62fc91562d2ca418ab8f104f47.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjpr322c247hr"
 path.s3tc="res://.godot/imported/armchair_1_3_wood_6.png-2902155679ce8e1e6384f574d3bf0903.s3tc.ctex"
+path.etc2="res://.godot/imported/armchair_1_3_wood_6.png-2902155679ce8e1e6384f574d3bf0903.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/armchair_1_3_wood_6.png"
-dest_files=["res://.godot/imported/armchair_1_3_wood_6.png-2902155679ce8e1e6384f574d3bf0903.s3tc.ctex"]
+dest_files=["res://.godot/imported/armchair_1_3_wood_6.png-2902155679ce8e1e6384f574d3bf0903.s3tc.ctex", "res://.godot/imported/armchair_1_3_wood_6.png-2902155679ce8e1e6384f574d3bf0903.etc2.ctex"]
 
 [params]
 

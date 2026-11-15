@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxwckhvxyf4t4"
 path.s3tc="res://.godot/imported/dinner_table_1_3_wood_5.png-4fdbd60a6d3089dba6551995df21ad83.s3tc.ctex"
+path.etc2="res://.godot/imported/dinner_table_1_3_wood_5.png-4fdbd60a6d3089dba6551995df21ad83.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/dinner_table_1_3_wood_5.png"
-dest_files=["res://.godot/imported/dinner_table_1_3_wood_5.png-4fdbd60a6d3089dba6551995df21ad83.s3tc.ctex"]
+dest_files=["res://.godot/imported/dinner_table_1_3_wood_5.png-4fdbd60a6d3089dba6551995df21ad83.s3tc.ctex", "res://.godot/imported/dinner_table_1_3_wood_5.png-4fdbd60a6d3089dba6551995df21ad83.etc2.ctex"]
 
 [params]
 

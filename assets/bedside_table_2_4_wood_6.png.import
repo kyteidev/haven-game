@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbsqt03qpslp1"
 path.s3tc="res://.godot/imported/bedside_table_2_4_wood_6.png-1a2827de9b0e6b0b7758fa9f8135068e.s3tc.ctex"
+path.etc2="res://.godot/imported/bedside_table_2_4_wood_6.png-1a2827de9b0e6b0b7758fa9f8135068e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/bedside_table_2_4_wood_6.png"
-dest_files=["res://.godot/imported/bedside_table_2_4_wood_6.png-1a2827de9b0e6b0b7758fa9f8135068e.s3tc.ctex"]
+dest_files=["res://.godot/imported/bedside_table_2_4_wood_6.png-1a2827de9b0e6b0b7758fa9f8135068e.s3tc.ctex", "res://.godot/imported/bedside_table_2_4_wood_6.png-1a2827de9b0e6b0b7758fa9f8135068e.etc2.ctex"]
 
 [params]
 

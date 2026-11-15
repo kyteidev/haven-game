@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl77aypi386f7"
 path.s3tc="res://.godot/imported/supply_crate_1_1_wooden_crate_7_1.png-0e6836599d162b8111fdfd00e8d3891a.s3tc.ctex"
+path.etc2="res://.godot/imported/supply_crate_1_1_wooden_crate_7_1.png-0e6836599d162b8111fdfd00e8d3891a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/supply_crate_1_1_wooden_crate_7_1.png"
-dest_files=["res://.godot/imported/supply_crate_1_1_wooden_crate_7_1.png-0e6836599d162b8111fdfd00e8d3891a.s3tc.ctex"]
+dest_files=["res://.godot/imported/supply_crate_1_1_wooden_crate_7_1.png-0e6836599d162b8111fdfd00e8d3891a.s3tc.ctex", "res://.godot/imported/supply_crate_1_1_wooden_crate_7_1.png-0e6836599d162b8111fdfd00e8d3891a.etc2.ctex"]
 
 [params]
 

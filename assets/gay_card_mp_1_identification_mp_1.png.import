@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjssyf5sntpkq"
 path.s3tc="res://.godot/imported/gay_card_mp_1_identification_mp_1.png-56adc2ff00b8681e8e982e5ea66ea14e.s3tc.ctex"
+path.etc2="res://.godot/imported/gay_card_mp_1_identification_mp_1.png-56adc2ff00b8681e8e982e5ea66ea14e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/gay_card_mp_1_identification_mp_1.png"
-dest_files=["res://.godot/imported/gay_card_mp_1_identification_mp_1.png-56adc2ff00b8681e8e982e5ea66ea14e.s3tc.ctex"]
+dest_files=["res://.godot/imported/gay_card_mp_1_identification_mp_1.png-56adc2ff00b8681e8e982e5ea66ea14e.s3tc.ctex", "res://.godot/imported/gay_card_mp_1_identification_mp_1.png-56adc2ff00b8681e8e982e5ea66ea14e.etc2.ctex"]
 
 [params]
 

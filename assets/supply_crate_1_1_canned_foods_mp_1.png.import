@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbfb3f3uyjokc"
 path.s3tc="res://.godot/imported/supply_crate_1_1_canned_foods_mp_1.png-e87675773f6539d1b0bd32267bd8b5d9.s3tc.ctex"
+path.etc2="res://.godot/imported/supply_crate_1_1_canned_foods_mp_1.png-e87675773f6539d1b0bd32267bd8b5d9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/supply_crate_1_1_canned_foods_mp_1.png"
-dest_files=["res://.godot/imported/supply_crate_1_1_canned_foods_mp_1.png-e87675773f6539d1b0bd32267bd8b5d9.s3tc.ctex"]
+dest_files=["res://.godot/imported/supply_crate_1_1_canned_foods_mp_1.png-e87675773f6539d1b0bd32267bd8b5d9.s3tc.ctex", "res://.godot/imported/supply_crate_1_1_canned_foods_mp_1.png-e87675773f6539d1b0bd32267bd8b5d9.etc2.ctex"]
 
 [params]
 
