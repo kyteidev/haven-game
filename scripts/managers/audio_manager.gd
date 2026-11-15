@@ -5,7 +5,10 @@ var bgm_tracks := [
 	preload("res://assets/sounds/bgm/looping/drone_03.ogg"),
 ]
 
-var sounds := { "ball_bounce": preload("res://assets/sounds/sfx/ball_bounce.wav") }
+var sounds := {
+	"ball_bounce": preload("res://assets/sounds/sfx/ball_bounce.wav"),
+	"pickup": preload("res://assets/sounds/sfx/pickup.mp3"),
+}
 
 @onready var bgm_player := AudioStreamPlayer.new()
 

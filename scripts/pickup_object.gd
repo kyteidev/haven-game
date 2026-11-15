@@ -18,4 +18,6 @@ func _body_entered(body: Node3D) -> void:
 
 		var score_manager = get_tree().get_first_node_in_group("score_manager")
 		score_manager.objects_left.erase(inst.name)
+
+		AudioManager.play_sfx("pickup", global_position)
 		queue_free()
