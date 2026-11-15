@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://ccb6yto8ui0f0" path="res://scripts/object.gd" id="1_n8boc"]
 [ext_resource type="PackedScene" uid="uid://bj00i4loany5g" path="res://assets/handheld_game_console_1.glb" id="2_4278h"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_o4adb"]
-size = Vector3(0.2, 0.05, 0.1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_hmaun"]
+size = Vector3(0.21783447, 0.17163086, 0.3071289)
 
 [node name="HandHeldConsole" type="Node3D" unique_id=1856089111]
 script = ExtResource("1_n8boc")
@@ -13,8 +13,8 @@ script = ExtResource("1_n8boc")
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1089898480]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025365017, 0)
-shape = SubResource("BoxShape3D_o4adb")
+transform = Transform3D(7.58, 0, 0, 0, 7.58, 0, 0, 0, 7.58, 0.016204834, 0.11069217, 0.011687338)
+shape = SubResource("BoxShape3D_hmaun")
 
 [node name="handheld_game_console_12" parent="." unique_id=1003477701 instance=ExtResource("2_4278h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025365017, 0)

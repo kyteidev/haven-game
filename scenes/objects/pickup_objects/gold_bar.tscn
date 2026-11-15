@@ -15,7 +15,7 @@ script = ExtResource("1_o4adb")
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1089898480]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025365017, 0)
+transform = Transform3D(4.71, 0, 0, 0, 4.71, 0, 0, 0, 4.71, 0.0052551553, 0.026925951, 0)
 shape = SubResource("BoxShape3D_o4adb")
 
 [connection signal="body_entered" from="StaticBody3D" to="." method="_on_static_body_3d_body_entered"]

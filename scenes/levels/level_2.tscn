@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bvmhglvrfmnqo"]
 
+[ext_resource type="Script" uid="uid://cfle2ward5enw" path="res://scripts/level.gd" id="1_sbygb"]
 [ext_resource type="PackedScene" uid="uid://4a0nbdswjslw" path="res://scenes/PlayerManager.tscn" id="1_v8d84"]
 [ext_resource type="PackedScene" uid="uid://64bjmsm54gec" path="res://scenes/objects/player_ball.tscn" id="2_gw1l3"]
 [ext_resource type="Texture2D" uid="uid://dhdv0hy3k6jpm" path="res://assets/wardrobe_mp_1_1_wood_3.png" id="3_tv7cl"]
@@ -18,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://bn0culmdpy15w" path="res://assets/shelf_mp_4_1.glb" id="16_rvwo1"]
 [ext_resource type="PackedScene" uid="uid://y4a27h3hj1xd" path="res://assets/wardrobe_mp_1_1.glb" id="17_yxkvy"]
 [ext_resource type="PackedScene" uid="uid://bdo8cytvhci5k" path="res://scenes/score_manager.tscn" id="18_gw1l3"]
+[ext_resource type="PackedScene" uid="uid://ddeyc331gw3vn" path="res://scenes/objects/pickup_object.tscn" id="19_p4se4"]
+[ext_resource type="PackedScene" uid="uid://415yn1blvw8f" path="res://scenes/objects/pickup_objects/gold_bar.tscn" id="20_lkn2k"]
+[ext_resource type="PackedScene" uid="uid://fsqucpibiviq" path="res://scenes/objects/pickup_objects/gay_card.tscn" id="21_sbygb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joiyc"]
 size = Vector3(12.234556, 0.001, 4.0073166)
@@ -40,7 +44,11 @@ size = Vector3(1.5068359, 1.2338867, 0.93408203)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8kwej"]
 size = Vector3(3.5307007, 1.2380981, 1.2563477)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lkn2k"]
+size = Vector3(2.3909912, 1, 3)
+
 [node name="level_2" type="Node3D" unique_id=788445174]
+script = ExtResource("1_sbygb")
 
 [node name="PlayerManager" parent="." unique_id=1846238950 groups=["player_manager"] instance=ExtResource("1_v8d84")]
 
@@ -239,4 +247,25 @@ process_mode = 3
 
 [node name="WorldEnvironment" parent="." unique_id=489330093 instance=ExtResource("14_xworo")]
 
-[node name="ScoreManager" parent="." unique_id=1155964808 instance=ExtResource("18_gw1l3")]
+[node name="ScoreManager" parent="." unique_id=1155964808 node_paths=PackedStringArray("objects") instance=ExtResource("18_gw1l3")]
+objects = [NodePath("../PickupObjects/PickupObject"), NodePath("../PickupObjects/PickupObject2")]
+objects_left = Array[String](["GoldBar", "GayCard"])
+
+[node name="PickupObjects" type="Node3D" parent="." unique_id=275271259]
+
+[node name="PickupObject" parent="PickupObjects" unique_id=772132052 instance=ExtResource("19_p4se4")]
+transform = Transform3D(1, 0, 0, 0, -1, -1.509958e-07, 0, 1.509958e-07, -1, -6.787866, -1.093399, 19.44306)
+object = ExtResource("20_lkn2k")
+
+[node name="PickupObject2" parent="PickupObjects" unique_id=1740615083 instance=ExtResource("19_p4se4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.945982, -1.0708468, 17.437527)
+object = ExtResource("21_sbygb")
+
+[node name="WinArea" type="Area3D" parent="." unique_id=169531835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50901365, 0, 27.9749)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WinArea" unique_id=303457854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3785486, -0.6363721, -5.7764606)
+shape = SubResource("BoxShape3D_lkn2k")
+
+[connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]

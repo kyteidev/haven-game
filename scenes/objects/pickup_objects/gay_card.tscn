@@ -13,7 +13,7 @@ script = ExtResource("1_hmaun")
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1089898480]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025365017, 0)
+transform = Transform3D(5.34, 0, 0, 0, 5.34, 0, 0, 0, 5.34, 0, 0.025365017, 0)
 shape = SubResource("BoxShape3D_o4adb")
 
 [node name="gay_card_mp_12" parent="." unique_id=1562587804 instance=ExtResource("2_htogc")]
