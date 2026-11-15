@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b7i5p8vuo14uq" path="res://assets/armchair_1_3.glb" id="7_iwr0g"]
 [ext_resource type="PackedScene" uid="uid://k405s683atu7" path="res://assets/arc_1_wall_1.glb" id="8_bahl2"]
 [ext_resource type="PackedScene" uid="uid://bqh6wfvv5dtor" path="res://scenes/hud.tscn" id="9_np2pn"]
+[ext_resource type="PackedScene" uid="uid://b8i4ujvwufc3" path="res://scenes/menus/pause_menu.tscn" id="10_excbq"]
 [ext_resource type="PackedScene" uid="uid://c8qm11lh5pgy1" path="res://scenes/world_environment.tscn" id="10_v6ha0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xs65t"]
@@ -247,8 +248,6 @@ shape = SubResource("BoxShape3D_btb5y")
 [node name="arc_1_wall_12" parent="Objects" unique_id=1517068151 instance=ExtResource("8_bahl2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.553251, -1.3268528, 17.435326)
 
-[node name="Hud" parent="." unique_id=1645712919 instance=ExtResource("9_np2pn")]
-
 [node name="Light" type="Node3D" parent="." unique_id=363536894]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Light" unique_id=1820409207]
@@ -264,6 +263,11 @@ light_energy = 4.84
 shadow_bias = 0.0
 spot_range = 4.7725234
 spot_angle = 72.10894
+
+[node name="Hud" parent="." unique_id=1645712919 instance=ExtResource("9_np2pn")]
+
+[node name="Pausemenu" parent="." unique_id=710415696 instance=ExtResource("10_excbq")]
+process_mode = 3
 
 [node name="WorldEnvironment" parent="." unique_id=489330093 instance=ExtResource("10_v6ha0")]
 
