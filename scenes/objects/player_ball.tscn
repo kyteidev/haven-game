@@ -15,9 +15,11 @@ gravity_scale = 0.0
 script = ExtResource("1_0bcqr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=132194720]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("SphereShape3D_nxcxh")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1015660767]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="Arrow" parent="." unique_id=379823709 instance=ExtResource("2_hrn2t")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
