@@ -1,16 +1,21 @@
 [gd_scene format=3 uid="uid://415yn1blvw8f"]
 
+[ext_resource type="Script" uid="uid://ccb6yto8ui0f0" path="res://scripts/object.gd" id="1_o4adb"]
 [ext_resource type="PackedScene" uid="uid://1ftu2bpy5inh" path="res://assets/gold_bar_pcs_1.glb" id="1_t2vwv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o4adb"]
 size = Vector3(0.2, 0.05, 0.1)
 
 [node name="GoldBar" type="Node3D" unique_id=1856089111]
+script = ExtResource("1_o4adb")
 
 [node name="gold_bar_pcs_12" parent="." unique_id=1966841756 instance=ExtResource("1_t2vwv")]
 
-[node name="StaticBody3D" type="Area3D" parent="gold_bar_pcs_12" unique_id=2032669973]
+[node name="StaticBody3D" type="Area3D" parent="." unique_id=2032669973]
+collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="gold_bar_pcs_12/StaticBody3D" unique_id=1089898480]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1089898480]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025365017, 0)
 shape = SubResource("BoxShape3D_o4adb")
+
+[connection signal="body_entered" from="StaticBody3D" to="." method="_on_static_body_3d_body_entered"]

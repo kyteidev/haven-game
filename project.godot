@@ -78,6 +78,11 @@ pause={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_2="ball"
+3d_physics/layer_3="controller"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
