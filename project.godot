@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 StateManager="*uid://otqg8hax173v"
 AudioManager="*uid://07nba6dj0adm"
+LevelsManager="*uid://5phl82skn1g6"
 
 [display]
 

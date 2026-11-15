@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var player_manager: PlayerManager = $PlayerManager
 @onready var score_manager: Node3D = $ScoreManager
+@onready var win_menu: CanvasLayer = $WinMenu
 
 
 func _ready() -> void:
@@ -10,5 +11,6 @@ func _ready() -> void:
 
 
 func _on_win_area_body_entered(_body: Node3D) -> void:
+	print(StateManager.score, score_manager.objects.size())
 	if player_manager.launched and StateManager.score == score_manager.objects.size():
-		print("win")
+		win_menu.show_win_screen()
