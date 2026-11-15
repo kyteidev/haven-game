@@ -9,6 +9,7 @@ bounce = 0.9
 [sub_resource type="SphereShape3D" id="SphereShape3D_nxcxh"]
 
 [node name="PlayerBall" type="RigidBody3D" unique_id=436715049 groups=["player_ball"]]
+collision_layer = 2
 physics_material_override = SubResource("PhysicsMaterial_3vyb7")
 gravity_scale = 0.0
 script = ExtResource("1_0bcqr")
