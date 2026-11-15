@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bdo8cytvhci5k" path="res://scenes/score_manager.tscn" id="12_vuesn"]
 [ext_resource type="PackedScene" uid="uid://jx5mjxm8cgg2" path="res://scenes/menus/win_menu.tscn" id="13_uvexj"]
 [ext_resource type="PackedScene" uid="uid://415yn1blvw8f" path="res://scenes/objects/pickup_objects/gold_bar.tscn" id="13_vuesn"]
+[ext_resource type="PackedScene" uid="uid://dpmtkpm7b20ri" path="res://scenes/menus/death_menu.tscn" id="14_n8fur"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xs65t"]
 size = Vector3(12.234556, 0.001, 4.0073166)
@@ -265,6 +266,8 @@ objects = [NodePath("../PickupObjects/PickupObject")]
 objects_left = Array[String](["GoldBar"])
 
 [node name="WinMenu" parent="." unique_id=1031971028 instance=ExtResource("13_uvexj")]
+
+[node name="DeathMenu" parent="." unique_id=1748793917 instance=ExtResource("14_n8fur")]
 
 [node name="PickupObjects" type="Node3D" parent="." unique_id=1572399832]
 

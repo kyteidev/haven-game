@@ -33,4 +33,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 1)
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1200204405]
 current = true
 
+[node name="Timer" type="Timer" parent="." unique_id=1425945202]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

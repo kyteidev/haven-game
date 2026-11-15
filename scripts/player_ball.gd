@@ -3,10 +3,14 @@ extends RigidBody3D
 const LAUNCH_SPEED_INCREASE_RATE = 10.0
 const MAX_FOV = 120.0
 
+const MIN_SPEED = 0.01
+
 @onready var arrow: Node3D = $Arrow
 @onready var camera: Camera3D = $SpringArm3D/Camera3D
 @onready var player_manager = get_tree().get_first_node_in_group("player_manager")
 @onready var spring_arm: SpringArm3D = $SpringArm3D
+@onready var death_screen = get_tree().get_first_node_in_group("death_screen")
+@onready var timer: Timer = $Timer
 
 var sensitivity := 0.03
 var max_tilt: float = deg_to_rad(80)
@@ -24,6 +28,11 @@ var direction: Vector2
 
 var mouse_delta := Vector2.ZERO
 
+var last_pos: Vector3
+var speed: float
+
+var can_detect_speed := false
+
 
 func _ready() -> void:
 	gravity_scale = 0.0
@@ -31,6 +40,7 @@ func _ready() -> void:
 	camera.fov = 75.0
 
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	last_pos = global_position
 
 
 func _physics_process(delta: float) -> void:
@@ -53,6 +63,12 @@ func _physics_process(delta: float) -> void:
 			launch_speed = min(launch_speed, player_manager.MAX_LAUNCH_SPEED)
 
 			camera.fov = 75.0 + (MAX_FOV - 75.0) * (launch_speed / player_manager.MAX_LAUNCH_SPEED)
+	else:
+		if can_detect_speed and speed != null and speed < MIN_SPEED:
+			death_screen.show_death_screen()
+		else:
+			speed = (global_position - last_pos).length()
+			last_pos = global_position
 
 
 func _input(event: InputEvent) -> void:
@@ -84,6 +100,12 @@ func _input(event: InputEvent) -> void:
 		var forward: Vector3 = get_global_transform_interpolated().basis.z
 		apply_impulse(forward * launch_speed * -1)
 
+		timer.start()
+
 
 func _on_body_entered(_body: Node) -> void:
 	AudioManager.play_sfx("ball_bounce", global_position)
+
+
+func _on_timer_timeout() -> void:
+	can_detect_speed = true
